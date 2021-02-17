@@ -1,0 +1,213 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <title>Espaço Holístico Viver Alegre e Feliz</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="{% url 'viveralegreefeliz:index' %}" class="navbar-brand"><strong>Home</strong></a>
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#res_nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="res_nav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="{% url 'viveralegreefeliz:quemsomos' %}" class="nav-link active"><strong>Quem Somos</strong></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a id='li_prog' href="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"><strong>Terapias Holísticas</strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{% url 'viveralegreefeliz:terapias_integrativas' %}" class="dropdown-item">Terapias Integrativas</a>
+                </li>
+                <li id='li_design'>
+                  <a href="{% url 'viveralegreefeliz:aconselhamento' %}" class="dropdown-item">Aconselhamento</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:constelacao_familiar' %}" class="dropdown-item">Constelação Familiar</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:meditacao_mentalizacao' %}" class="dropdown-item">Meditação & Mentalização</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:arteterapia'%}" class="dropdown-item">Arteterapia</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:agua_magnetizada'%}" class="dropdown-item">Água Magnetizada</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:pnl'%}" class="dropdown-item">PNL</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a id='li_prog' href="" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown"><strong>Treinamentos</strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{% url 'viveralegreefeliz:desenvolvimento_pessoal' %}" class="dropdown-item">Desenvolvimento Pessoal</a>
+                </li>
+                <li id='li_design'>
+                  <a href="{% url 'viveralegreefeliz:introducao_constelacao_familiar' %}" class="dropdown-item">Introdução à Constelação Familiar</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:arteterapia' %}" class="dropdown-item">Arteterapia</a>
+                </li>
+                <li>
+                  <a href="{% url 'viveralegreefeliz:agua_magnetizada_saude' %}" class="dropdown-item">Água Magnetizada</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'viveralegreefeliz:loja' %}" class="nav-link active"><strong>Loja Virtual</strong></a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'viveralegreefeliz:galeria' %}" class="nav-link text-dark"><strong>Galeria</strong></a>
+            </li>
+          </ul>
+       </div>
+      </div>
+    </nav> <!--End of  Navigation Bar -->
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+          <div class="container text-left text-md-left">
+            <div class="row text-left text-md-left">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark"><strong>Édina Peixoto Thomaz</strong></h5>
+                <p>Édina Peixoto Thomaz, é terapeuta holística, palestrante holística, e trabalha com as técnicas de terapias integrativas, holísticas, naturais, não invasivas.</p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weght-bold text-dark"><strong>Terapias</strong></h5>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:meditacao_mentalizacao' %}" class="text-dark" style="text-decoration: none;">Meditação</a>
+                </p>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:terapias_integrativas' %}" class="text-dark" style="text-decoration: none;">Terapia Holística</a>
+                </p>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:meditacao_mentalizacao' %}" class="text-dark" style="text-decoration: none;">Mentalização</a>
+                </p>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:arteterapia' %}" class="text-dark" style="text-decoration: none;">Arteterapia</a>
+                </p>
+              </div>
+
+              <div class="col-md col-lg-2 col-xl-2 mx-auto- mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark"><strong>Treinamentos</strong></h5>
+
+                <p>
+                  <a href="{% url 'viveralegreefeliz:desenvolvimento_pessoal' %}" class="text-dark" style="text-decoration: none;">Desenvolvimento Pessoal</a>
+                </p>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:constelacao_familiar' %}" class="text-dark" style="text-decoration: none;">Constelação Familiar</a>
+                </p>
+
+                <p>
+                  <a href="{% url 'viveralegreefeliz:agua_magnetizada' %}"  class="text-dark" style="text-decoration: none;">Água Magnetizada</a>
+                </p>
+              </div>
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-dark"><strong>Contato</strong></h5>
+                <p>
+                  <a href="{% url 'viveralegreefeliz:agendar' %}" class="text-dark" style="text-decoration: none;"><i class="fas fa-pen text-dark" ></i> Agendar Consulta </a>
+                </p>
+                <p>
+                  <i class="fas fa-home mr-3 text-dark"></i>  Barbacena, MG, Brasil
+                </p>
+                <p>
+                  <i class="fas fa-envelope mr-3 text-dark"></i>  edina@viveralegreefeliz.com.br
+                </p>
+                <p>
+                  <i class="fas fa-phone mr-3 text-dark"></i>  55 31 99196 6112
+                </p>
+              </div>
+           </div>
+           <hr class="mb-4">
+           <div class="row align-items-center">
+             <div class="col-md-7 col-lg-8">
+              <p> Copyright 2021  All rights reseved by:
+                <a href="" style="text-decoration: none;">
+                  <strong class="text-warning"> Lawrence</strong>
+                </a>
+              </p>
+             </div>
+
+             <div class="col-md-5 col-lg-4">
+               <div class="text-center text-md-right">
+                 <ul class="list-unstyled list-inline">
+                   <li class="list-inline-item">
+                     <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-facebook"></i></a>
+                   </li>
+                   <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-twitter"></i></a>
+                   </li>
+                   <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-google-plus"></i></a>
+                   </li>
+                   <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-linkedin"></i></a>
+                   </li>
+                   <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-youtube"></i></a>
+                   </li>
+                   <li class="list-inline-item">
+                    <a href="https://www.facebook.com/Viveralegreefelizcom-100601871990184/?modal=admin_todo_tour&notif_id=1610383825570294&notif_t=page_invite&ref=notif" class="btn-floating btn-sm text-dark" style="font-size:23px;"><i class="fab fa-instagram"></i></a>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+          </div>
+        </footer><!-- End of Footer -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  </body>
+  <style>
+
+  footer{
+    font-family: 'Playfair Display', serif;
+  }
+  nav{
+    font-family: 'Playfair Display', serif;
+  }
+  body{
+    font-family: 'Playfair Display', serif;
+  }
+
+  </style>
+</html>

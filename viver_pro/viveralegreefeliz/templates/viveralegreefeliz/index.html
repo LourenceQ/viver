@@ -1,0 +1,120 @@
+{% extends "viveralegreefeliz/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Header -->
+        <header class="jumbotron text-center bg-light" style="padding: 30px;" >
+          <div class="row py-2">
+            <div class="col-md-8 col-lg-6 mx-auto">
+              <h1>Bem vindo ao Espaço Holístico Viver Alegre e Feliz !</h1>
+              <div>
+                <p class="lead text-md-right my-5">
+                  O nosso objetivo é oferecer equilíbrio emocional,
+                 mental e sutil às pessoas para que possam viver alegre e feliz consigo mesmas,
+                 e se desenvolver em todas as áreas da vida.</p>
+              </div>
+            </div>
+          </div>
+        </header> <!-- End of Header -->
+
+        <!-- Services -->
+        <section class="services">
+          <div class="container">
+            <div class="row text-center my-5">
+              <div class="col-md-6">
+                <img src="{% static 'img/med4.jpg' %}" alt="Técnicas Terapêuticas" class="bd-placeholder-img rounded-circle" width="140px" height="140px">
+                <h3>Técnicas Terapêuticas</h3>
+                <p>
+                  Utilizamos técnicas terapêuticas poderosas e breves como meditação, mentalização, constelação familiar, aconselhamentos e arteterapia, capazes de levar soluções aos seus conflitos e limitações pessoais e familiares.
+                </p>
+                <p>
+                  <a href="" class="btn btn-secondary">Veja Mais &raquo;</a>
+                </p>
+              </div>
+              <div class="col-md-6">
+
+                <img src="{% static 'img/med3.jpg' %}" alt="Arteterapia" class="bd-placeholder-img rounded-circle" width="140px" height="140px">
+                <h3>Arteterapia</h3>
+                <p>Criadora do método Viver Alegre e Feliz, para você que busca o autoconhecimento para o autodesenvolvimento pessoal e a espiritualidade, através das Terapias Integrativas, Palestras e Treinamentos online.</p>
+                <p><a href="" class="btn btn-secondary">Veja Mais &raquo;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section> <!-- End of Services -->
+
+        <!-- Projects -->
+        <section class="projects">
+          <div class="container my-5">
+            <div class="row g-3">
+               <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                  <img src="{% static 'img/med3.jpg' %}" alt="" width="100%" height="250px">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Iniciando com você que tem a felicidade de estar em contato com a nossa página
+                      Viver Alegre e Feliz que o levará a uma vida plena de alegria e felicidade conforme deseja,
+                      o que é o natural.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                        <small class="text-muted">9 minutos</small>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                  <img src="{% static 'img/viver1.jpg' %}" alt="Imagem" width="100%" height="250px">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Édina Peixoto Thomaz, é Terapeuta Holística, Palestrante Holística, e trabalha com as
+                      técnicas de terapias integrativas, holísticas, naturais, não invasivas e que visam auxiliar
+                      nas soluções de conflitos e limitações do ser humano no âmbito individual, familiar, casais,
+                      pais e filhos, profissional, pedagógico, jurídico, empresarial e saúde.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                        <small class="text-muted">9 minutos</small>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                  <img src="{% static 'img/med5.jpg' %}" alt="Imagem" width="100%" height="250px">
+                  <div class="card-body">
+                    <p class="card-text">Distúrbios energéticos tão comuns e crescente na atualidade, quais sejam ansiedade, depressão,
+                      síndromes do pânico, do ninho vazio, transtornos do sono, sejam de ordem individual ou
+                      sistêmico conforme a ciência das Constelações familiares por Berth Hellinger.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                        <small class="text-muted">9 minutos</small>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> <!-- End of Projects -->
+        <section>
+          <div class="container text-center">
+            <div class="row align-items-center ">
+              <div class="mx-5 my-5">
+                <!-- <a href="" class="btn btn-outline-secondary btn-lg" width="120px" >Agendar Consulta</a> -->
+              </div>
+            </div>
+        </section>
+    {% endblock %}
+
+  </body>
+</html>
